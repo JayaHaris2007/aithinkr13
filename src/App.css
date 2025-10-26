@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.chat-message.user {
+  text-align: right;
+}
+
+.chat-message.bot {
+  text-align: left;
+}
+
+.chat-footer {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-footer input {
+  width: 85%;
+  padding: 8px;
+}
+
+.chat-footer button {
+  width: 12%;
+}
+
+.login-box {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10%;
+  background: #1e1e2f;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.form-control {
+  background-color: #2a2a3a;
+  border: none;
+  color: #fff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  background-color: #2a2a3a;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #4e9af1;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #357ae8;
+}
+
+.image {
+  padding-top: 5px;
+  margin-right: 15px;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.sidebar,
+.sidebar-wrapper {
+  background-color: #343a40; /* Or use #222 or #2d2d2d for a flatter look */
+  color: white;
+  /* box-shadow: none; */ /* Ensure no shadow */
+}
+
+.sidebar h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+.sidebar ul li.active a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+  color: #adb5bd;
+}
+
+.sidebar ul li a:hover i {
+  color: #fff;
+}
+
+.mainbar {
+  margin-left: 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Optional: Bot is typing styling */
+.typing-indicator {
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Mobile Responsive Tweaks */
+
+/* Layout Wrapper */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  background-color: #f1f1f1;
+}
+
+/* Sidebar stays on the left */
+.sidebar {
+  flex-shrink: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+}
+
+/* Main content takes the rest of the space */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Align login button and heading */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar{
+  margin-left: 0px;
+}
+
+.box{
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+}
+
+.chat-body{
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.guest-mode{
+  display: inline;
+}
+
+.guest-mode .navbar {
+  margin-left: 0 !important; /* No left margin */
+}
+
+.guest-mode .box {
+  margin-top: 5%;
+  margin-left: 5%;  /* Remove left margin */
+  margin-right: 5%;  /* Remove left margin */
+  max-width: 100%; /* Limit width for chatbox */
+  margin: 20px auto; /* Center horizontally with vertical margin */
+  height: auto; /* Adjust height to content */
+  width: 90%; /* Responsive width */
+}
+
+/* Adjust mainbar for guest mode */
+.guest-mode .mainbar {
+  margin-left: 0 !important;
+  padding: 20px 10px;
+}
+
+/* Optional: keep chat-body scroll area consistent */
+.guest-mode .chat-body {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+
+.typing-indicator {
+  font-style: italic;
+  color: #6c757d;
+  /* Optional: animated dots */
+  position: relative;
+}
+
+.typing-indicator .chat-text::after {
+  content: '...';
+  animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Responsive layout for Main.js */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar-wrapper {
+  width: 250px;
+  background: #343a40;
+  min-height: 100vh;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1100;
+  background: #343a40;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 0px;
+  transition: margin-left 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    width: 220px;
+    min-height: 100vh;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  }
+  .sidebar-wrapper.open {
+    transform: translateX(0);
+  }
+  .sidebar-toggle {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 24px;
+  }
+  .sidebar-toggle::after {
+    display: none;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+  .navbar{
+  margin-left: 50px;
+  }
+  
+  .box{
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .box input[type="text"]{
+    width: 70%;
+  }
+  .box button{
+    width: 30%;
+  }
+}
+
+/* Hide toggle button when sidebar is open */
+.layout.sidebar-open .sidebar-toggle {
+  display: none !important;
+}
+
+.mainside{
+  margin-left: 0;
+}
+
+.divider {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.divider-line {
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+.divider-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.btn-outline-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.btn-outline-dark img {
+  margin-right: 10px;
+}
