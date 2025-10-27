@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/aithinkr13/static/css/main.268fd830.css",
+    "main.js": "/aithinkr13/static/js/main.faceb0e2.js",
+    "static/js/453.5956feaa.chunk.js": "/aithinkr13/static/js/453.5956feaa.chunk.js",
+    "static/media/logo.png": "/aithinkr13/static/media/logo.18001c2f014810b8dd76.png",
+    "static/media/logo.svg": "/aithinkr13/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/aithinkr13/index.html",
+    "main.268fd830.css.map": "/aithinkr13/static/css/main.268fd830.css.map",
+    "main.faceb0e2.js.map": "/aithinkr13/static/js/main.faceb0e2.js.map",
+    "453.5956feaa.chunk.js.map": "/aithinkr13/static/js/453.5956feaa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.268fd830.css",
+    "static/js/main.faceb0e2.js"
+  ]
+}
